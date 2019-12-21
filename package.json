@@ -1,7 +1,7 @@
 {
-  "name": "nodeauth-challenge",
+  "name": "Backend",
   "version": "1.0.0",
-  "description": "Authentication Sprint Challenge",
+  "description": "Back End Build Week",
   "main": "index.js",
   "scripts": {
     "test": "cross-env DB_ENV=testing jest --watch",
