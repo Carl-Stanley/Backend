@@ -40,7 +40,9 @@ router.post('/login', (req, res) => {
         const token = generateToken(user);
         res.status(200).json({
           message: "Login successful!",
-          token
+          token,
+          user_id: user.id       
+          
         });
       } else {
         res.status(401).json({ message: "Password Incorrect!" });
