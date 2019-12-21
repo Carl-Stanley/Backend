@@ -9,7 +9,7 @@ To Run the server type 'npm run server'
 Login: http://localhost:5500/api/auth/login 
 Action: Post
 Requires: username and password passed in headers.
-returns: authorization token if successful, error if unsuccessful.  
+returns:  authorization token if successful and a the user_id of the logged in user, error if unsuccessful.  
 
 
 Register: http://localhost:5500/api/auth/register 
