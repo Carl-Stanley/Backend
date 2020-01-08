@@ -19,7 +19,7 @@ return jwt.sign(payload,'aeaeiouAndSometimesY', options);
 
 router.post('/register', (req, res) => {
  
-  const { username, password } = req.headers;
+  const { username, password } = req.body;
   Users.insert({ username, password: bcrypt.hashSync(password, 8) })
     .then(id => {
       res.status(201).json({ message: "User registration complete", id });
@@ -32,7 +32,7 @@ router.post('/register', (req, res) => {
 
 router.post('/login', (req, res) => {
  
-  const { username, password } = req.headers;
+  const { username, password } = req.body;
   Users
     .findByUsername(username)
     .then(user => {
